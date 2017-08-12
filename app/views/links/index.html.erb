@@ -1,0 +1,19 @@
+<table>
+	<thead>
+		<th>ID</th>
+		<th>Long URL</th>
+		<th>Short URL</th>
+	</thead>
+	<tbody>
+		<% @links.each do |link| %>
+			<tr>
+				<td><%= link.id %></td>
+				<td><%= link_to link.long_url, link.long_url, target: :_blank %></td>
+				<td><%= link_to "http://localhost:3000/#{link.short_url}", "http://localhost:3000/#{link.short_url}", target: :_blank  %></td>
+			</tr>
+		<%end%>
+	</tbody>
+</table>
+
+
+
