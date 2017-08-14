@@ -7,7 +7,7 @@
 	<tbody>
 		<% @links.each do |link| %>
 			<tr>
-				<td><%= link.id %></td>
+				<td><%= link_to link.id, "/links/#{link.id}" %></td>
 				<td><%= link_to link.long_url, link.long_url, target: :_blank %></td>
 				<td><%= link_to "http://localhost:3000/#{link.short_url}", "http://localhost:3000/#{link.short_url}", target: :_blank  %></td>
 			</tr>

@@ -9,6 +9,11 @@
   </head>
 
   <body>
+    <nav class="nav">
+    	<div class="nav__link"><%= link_to "New URL", root_path %></div>
+    	<div class="nav__link"><%= link_to "All URLs", "/links" %></div>
+    </nav>
+
     <%= yield %>
   </body>
 </html>

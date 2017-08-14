@@ -13,6 +13,7 @@ class LinksController < ApplicationController
 	def create
 		@link = Link.new(user_params)
 		@link.generate_short_url
+		@link.long_url_format
 
 		if @link.save
 			redirect_to '/links/new', notice: "Shortened URL: http://localhost:3000/#{@link.short_url}"
