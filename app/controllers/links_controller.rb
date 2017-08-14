@@ -16,7 +16,7 @@ class LinksController < ApplicationController
 		@link.long_url_format
 
 		if @link.save
-			redirect_to '/links/new', notice: "Shortened URL: http://localhost:3000/#{@link.short_url}"
+			redirect_to '/links/new', notice: "Shortened URL: http://pacific-shelf-87577.herokuapp.com/#{@link.short_url}"
 		else
 			render 'new'
 		end
